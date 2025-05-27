@@ -1,0 +1,87 @@
+# =========================
+# Build output directories
+# =========================
+bin/
+obj/
+publish/
+out/
+
+# =========================
+# Visual Studio / Rider
+# =========================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider-specific
+.idea/
+
+# =========================
+# NuGet packages
+# =========================
+# 如果你不想提交整个 packages 目录，则忽略以下内容：
+packages/
+# 但保留 packages 里的 DLL 供版本管理（可选）：
+!/packages/*/lib/*.dll
+
+# =========================
+# .NET Core / ASP.NET Core
+# =========================
+project.lock.json
+project.fragment.lock.json
+*.dbmdl
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Logs and databases
+# =========================
+*.log
+*.tlf
+*.sql
+*.sqlite
+
+# =========================
+# Test results
+# =========================
+TestResults/
+*.trx
+
+# =========================
+# OS 生成的文件
+# =========================
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# =========================
+# 其它临时/工具文件
+# =========================
+*.userprefs      # MonoDevelop / Xamarin Studio
+*.vsix
+*.nupkg
+*.cache
+*.publishsettings
+
+# =========================
+# 工程生成的中间文件
+# =========================
+*_i.*            # intermediate files
+*_p.*            # intermediate files
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.tmp
+*.tmp_proj
+/WebHome/appsettings.Development.json
+/AutoUploadFile/Properties/PublishProfiles/FolderProfile.pubxml
+/AutoUploadFile/appsettings.json
