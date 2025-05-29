@@ -3,10 +3,11 @@
         xmlns:vm="using:CIA.UI.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
+		Width="1024" Height="600"
         x:Class="CIA.UI.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/Images/code_insight_logo.png"
         Title="CIA.UI">
 
     <Design.DataContext>
@@ -14,6 +15,34 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <TextBlock Text="Welcome to CIA.UI!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
-    
+	<Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
+		<Border Padding="10" Background="{DynamicResource PrimaryBackrgroundGradient}">
+			<Grid RowDefinitions="*, Auto">
+				<StackPanel Spacing="12">
+					<Image Source="{SvgImage /Assets/Images/code_insight_horizontal_logo.svg}" Width="160"/>
+					<Button HorizontalAlignment="Stretch">
+						<StackPanel Orientation="Horizontal">
+							<Label Classes="icon" Content="&#xE260;"></Label>
+							<Label Content="项目"></Label>
+						</StackPanel>
+					</Button>
+					<Button HorizontalAlignment="Stretch">
+						<StackPanel Orientation="Horizontal">
+							<Label Classes="icon" Content="&#xEC8C;"></Label>
+							<Label Content="任务"></Label>
+						</StackPanel>
+					</Button>
+					<Button HorizontalAlignment="Stretch">
+						<StackPanel Orientation="Horizontal">
+							<Label Classes="icon" Content="&#xE0A8;"></Label>
+							<Label Content="报表"></Label>
+						</StackPanel>
+					</Button>
+				</StackPanel>
+				<Button Classes="transparent" Grid.Row="1">
+					<Label Classes="icon-only" Content="&#xE272;"></Label>
+				</Button>
+			</Grid>
+		</Border>
+	</Grid>
 </Window>

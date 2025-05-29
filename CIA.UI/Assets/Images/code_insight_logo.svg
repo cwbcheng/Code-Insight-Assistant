@@ -1,0 +1,76 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#primaryGradient)" opacity="0.1"/>
+  
+  <!-- Main container circle -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Code brackets -->
+  <path d="M 45 70 L 35 80 L 35 100 L 35 120 L 45 130" 
+        fill="none" 
+        stroke="url(#primaryGradient)" 
+        stroke-width="4" 
+        stroke-linecap="round"/>
+  
+  <path d="M 155 70 L 165 80 L 165 100 L 165 120 L 155 130" 
+        fill="none" 
+        stroke="url(#primaryGradient)" 
+        stroke-width="4" 
+        stroke-linecap="round"/>
+  
+  <!-- Central eye/insight symbol -->
+  <circle cx="100" cy="100" r="25" fill="url(#primaryGradient)" opacity="0.2"/>
+  <circle cx="100" cy="100" r="18" fill="none" stroke="url(#primaryGradient)" stroke-width="2"/>
+  
+  <!-- Pupil with gradient -->
+  <circle cx="100" cy="100" r="8" fill="url(#accentGradient)"/>
+  <circle cx="102" cy="98" r="3" fill="white" opacity="0.8"/>
+  
+  <!-- Code lines inside the eye -->
+  <line x1="85" y1="95" x2="95" y2="95" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.6"/>
+  <line x1="105" y1="95" x2="115" y2="95" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.6"/>
+  <line x1="85" y1="105" x2="90" y2="105" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.6"/>
+  <line x1="110" y1="105" x2="115" y2="105" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Insight rays -->
+  <g filter="url(#glow)">
+    <line x1="100" y1="45" x2="100" y2="55" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+    <line x1="135" y1="65" x2="130" y2="70" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="155" y1="100" x2="145" y2="100" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+    <line x1="135" y1="135" x2="130" y2="130" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="100" y1="155" x2="100" y2="145" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+    <line x1="65" y1="135" x2="70" y2="130" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="45" y1="100" x2="55" y2="100" stroke="url(#accentGradient)" stroke-width="2" opacity="0.8"/>
+    <line x1="65" y1="65" x2="70" y2="70" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Binary code pattern in background -->
+  <text x="70" y="40" font-family="monospace" font-size="8" fill="url(#primaryGradient)" opacity="0.3">101</text>
+  <text x="130" y="45" font-family="monospace" font-size="8" fill="url(#primaryGradient)" opacity="0.3">010</text>
+  <text x="40" y="160" font-family="monospace" font-size="8" fill="url(#primaryGradient)" opacity="0.3">110</text>
+  <text x="150" y="165" font-family="monospace" font-size="8" fill="url(#primaryGradient)" opacity="0.3">001</text>
+  
+  <!-- Connecting dots -->
+  <circle cx="75" cy="75" r="2" fill="url(#accentGradient)" opacity="0.5"/>
+  <circle cx="125" cy="75" r="2" fill="url(#accentGradient)" opacity="0.5"/>
+  <circle cx="75" cy="125" r="2" fill="url(#accentGradient)" opacity="0.5"/>
+  <circle cx="125" cy="125" r="2" fill="url(#accentGradient)" opacity="0.5"/>
+</svg>

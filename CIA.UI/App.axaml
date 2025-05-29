@@ -11,5 +11,19 @@
   
     <Application.Styles>
         <FluentTheme />
+		<StyleInclude Source="/Styles/AppDefaultStyles.axaml"></StyleInclude>
     </Application.Styles>
+	<Application.Resources>
+		<SolidColorBrush x:Key="PrimaryForeground" Color="#CFCFCF" ></SolidColorBrush>
+		<SolidColorBrush x:Key="PrimaryBackground" Color="#212121" ></SolidColorBrush>
+		<LinearGradientBrush x:Key="PrimaryBackrgroundGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+			<GradientStop Offset="0" Color="#212121"/>
+			<GradientStop Offset="1" Color="#3c3c3c"/>
+		</LinearGradientBrush>
+		<SolidColorBrush x:Key="PrimaryHoverForeground" Color="White" ></SolidColorBrush>
+		<SolidColorBrush x:Key="PrimaryHoverBackground" Color="#111111" ></SolidColorBrush>
+		<FontFamily x:Key="SourceHan">/Assets/Fonts/SourceHanSansSC-VF.ttf#Source Han Sans SC VF</FontFamily>
+		<FontFamily x:Key="PhosphorFill">/Assets/Fonts/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
+		<FontFamily x:Key="Phosphor">/Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
+	</Application.Resources>
 </Application>
